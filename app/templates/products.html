@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Products - Inventory{% endblock %}
+
+{% block content %}
+<h2>Products</h2>
+<a href="{{ url_for('main.add_product') }}">Add New Product</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.product_id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>
+                <a href="{{ url_for('main.edit_product', product_id=product.product_id) }}">Edit</a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="4">No products found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

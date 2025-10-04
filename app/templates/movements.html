@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Product Movements - Inventory{% endblock %}
+
+{% block content %}
+<h2>Product Movements</h2>
+<a href="{{ url_for('main.add_movement') }}">Add New Movement</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Movement ID</th>
+            <th>Timestamp</th>
+            <th>Product</th>
+            <th>From Location</th>
+            <th>To Location</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for move in movements %}
+        <tr>
+            <td>{{ move.movement_id }}</td>
+            <td>{{ move.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+            <td>{{ move.product_id }}</td>
+            <td>{{ move.from_location or '-' }}</td>
+            <td>{{ move.to_location or '-' }}</td>
+            <td>{{ move.qty }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="6">No movements found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

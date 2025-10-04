@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Product Movement - Inventory{% endblock %}
+
+{% block content %}
+<h2>Add New Product Movement</h2>
+
+<form method="POST">
+    <label for="id">Movement ID:</label><br>
+    <input type="text" name="id" id="id" required><br><br>
+
+    <label for="product">Product:</label><br>
+    <select name="product" id="product" required>
+        <option value="">-- Select Product --</option>
+        {% for product in products %}
+        <option value="{{ product.product_id }}">{{ product.name }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label for="from_location">From Location (leave blank if incoming):</label><br>
+    <select name="from_location" id="from_location">
+        <option value="">-- None --</option>
+        {% for loc in locations %}
+        <option value="{{ loc.location_id }}">{{ loc.name }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label for="to_location">To Location (leave blank if outgoing):</label><br>
+    <select name="to_location" id="to_location">
+        <option value="">-- None --</option>
+        {% for loc in locations %}
+        <option value="{{ loc.location_id }}">{{ loc.name }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label for="qty">Quantity:</label><br>
+    <input type="number" name="qty" id="qty" min="1" required><br><br>
+
+    <button type="submit">Add Movement</button>
+</form>
+
+<br>
+<a href="{{ url_for('main.movements') }}">Back to Movements</a>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Locations - Inventory{% endblock %}
+
+{% block content %}
+<h2>Locations</h2>
+<a href="{{ url_for('main.add_location') }}">Add New Location</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Location ID</th>
+            <th>Location Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for location in locations %}
+        <tr>
+            <td>{{ location.location_id }}</td>
+            <td>{{ location.name }}</td>
+            <td>
+                <a href="{{ url_for('main.edit_location', location_id=location.location_id) }}">Edit</a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="3">No locations found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Inventory Management{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #333; font-weight: bold; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .container { max-width: 1000px; margin: auto; }
+        form input, form select, form button { padding: 5px 10px; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Inventory Management</h1>
+            <nav>
+                <a href="{{ url_for('main.products') }}">Products</a>
+                <a href="{{ url_for('main.locations') }}">Locations</a>
+                <a href="{{ url_for('main.movements') }}">Movements</a>
+                <a href="{{ url_for('main.report') }}">Report</a>
+            </nav>
+            <hr>
+        </header>
+
+        {% block content %}
+        <!-- Page specific content goes here -->
+        {% endblock %}
+
+        <footer>
+            <hr>
+            <p>&copy; 2025 Inventory App</p>
+        </footer>
+    </div>
+</body>
+</html>
