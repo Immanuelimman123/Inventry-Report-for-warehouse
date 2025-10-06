@@ -181,19 +181,19 @@ Feel free to open issues or pull requests to contribute.
 
 
 ## Product Movement
-![Product_Movement](images/Product Movement.png)
+![Product_Movement](images/Product_Movement.png)
 
 
 ## Final Balance Report 
-![Final_Balance_Report](images/Final Balance Report.png)
+![Final_Balance_Report](images/Final_Balance_Report.png)
 
 
 ## Add New Product
-![Add_New_Product](images/Add New Product.png)
+![Add_New_Product](images/Add_New_Product.png)
 
 
 ## Deleting item
-![Deleting_item](images/Deleting item.png)
+![Deleting_item](images/Deleting_item.png)
 
 
 Thank you for using this project! 🚀
