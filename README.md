@@ -1,4 +1,4 @@
-```markdown
+
 # Inventory Management System
 
 A professional Flask-based Inventory Management System to manage products, storage locations, and product movements with real-time inventory reporting.
@@ -181,19 +181,19 @@ Feel free to open issues or pull requests to contribute.
 
 
 ## Product Movement
-![Product Movement] (images/Product Movement.png)
+![Product_Movement] (images/Product Movement.png)
 
 
 ## Final Balance Report 
-![Final Balance Report] (images/Final Balance Report.png)
+![Final_Balance_Report] (images/Final Balance Report.png)
 
 
 ## Add New Product
-![Add New Product] (images/Add New Product.png)
+![Add_New_Product] (images/Add New Product.png)
 
 
 ## Deleting item
-![Deleting item] (images/Deleting item.png)
+![Deleting_item] (images/Deleting item.png)
 
 
 Thank you for using this project! 🚀
