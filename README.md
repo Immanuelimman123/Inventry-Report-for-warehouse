@@ -173,27 +173,27 @@ Feel free to open issues or pull requests to contribute.
 
 
 ## Product
-![Product](images/Product.png)
+![product] (images/Product.png)
 
 
 ## Location
-![Location](images/Location.png)
+![Location] (images/Location.png)
 
 
 ## Product Movement
-![Product Movement](images/Product Movement.png)
+![Product Movement] (images/Product Movement.png)
 
 
 ## Final Balance Report 
-![Final Balance Report](images/Final Balance Report.png)
+![Final Balance Report] (images/Final Balance Report.png)
 
 
 ## Add New Product
-![Add New Product](images/Add New Product.png)
+![Add New Product] (images/Add New Product.png)
 
 
 ## Deleting item
-![Deleting item](images/Deleting item.png)
+![Deleting item] (images/Deleting item.png)
 
 
 Thank you for using this project! 🚀
