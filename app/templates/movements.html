@@ -15,6 +15,7 @@
             <th>From Location</th>
             <th>To Location</th>
             <th>Quantity</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -26,10 +27,15 @@
             <td>{{ move.from_location or '-' }}</td>
             <td>{{ move.to_location or '-' }}</td>
             <td>{{ move.qty }}</td>
+            <td>
+                <form action="{{ url_for('main.delete_movement', movement_id=move.movement_id) }}" method="post" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this movement?');">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
         </tr>
         {% else %}
         <tr>
-            <td colspan="6">No movements found.</td>
+            <td colspan="7">No movements found.</td>
         </tr>
         {% endfor %}
     </tbody>

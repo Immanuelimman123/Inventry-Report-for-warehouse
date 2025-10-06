@@ -36,9 +36,19 @@ def edit_product(product_id):
     product = Product.query.get_or_404(product_id)
     if request.method == 'POST':
         product.name = request.form['name']
+        product.quantity = int(request.form['quantity'])
         db.session.commit()
         return redirect(url_for('main.products'))
     return render_template('edit_product.html', product=product)
+
+# Delete product
+@main.route('/products/delete/<string:product_id>', methods=['POST'])
+def delete_product(product_id):
+    product = Product.query.get_or_404(product_id)
+    db.session.delete(product)
+    db.session.commit()
+    return redirect(url_for('main.products'))
+
 
 # ============================
 # --- Locations CRUD ---
@@ -69,6 +79,15 @@ def edit_location(location_id):
         return redirect(url_for('main.locations'))
     return render_template('edit_location.html', location=loc)
 
+# Delete location
+@main.route('/locations/delete/<string:location_id>', methods=['POST'])
+def delete_location(location_id):
+    loc = Location.query.get_or_404(location_id)
+    db.session.delete(loc)
+    db.session.commit()
+    return redirect(url_for('main.locations'))
+
+
 # ============================
 # --- Product Movements CRUD ---
 # ============================
@@ -93,6 +112,14 @@ def add_movement():
         db.session.commit()
         return redirect(url_for('main.movements'))
     return render_template('add_movement.html', products=products, locations=locations)
+
+# Delete movement
+@main.route('/movements/delete/<string:movement_id>', methods=['POST'])
+def delete_movement(movement_id):
+    move = ProductMovement.query.get_or_404(movement_id)
+    db.session.delete(move)
+    db.session.commit()
+    return redirect(url_for('main.movements'))
 
 # ============================
 # --- Inventory Report ---
@@ -126,4 +153,6 @@ def report():
             })
 
     return render_template('report.html', report=report_data)
+
+
 
