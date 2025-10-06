@@ -163,7 +163,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for full 
 
 ## Contact
 
-Created and maintained by [Your Name] - [your.email@example.com]  
+Created and maintained by Immanuel S - iimmanuel321@gmail.com  
 Feel free to open issues or pull requests to contribute.
 
 ---
@@ -173,27 +173,27 @@ Feel free to open issues or pull requests to contribute.
 
 
 ## Product
-![product] (images/Product.png)
+![product](images/Product.png)
 
 
 ## Location
-![Location] (images/Location.png)
+![Location](images/Location.png)
 
 
 ## Product Movement
-![Product_Movement] (images/Product Movement.png)
+![Product_Movement](images/Product Movement.png)
 
 
 ## Final Balance Report 
-![Final_Balance_Report] (images/Final Balance Report.png)
+![Final_Balance_Report](images/Final Balance Report.png)
 
 
 ## Add New Product
-![Add_New_Product] (images/Add New Product.png)
+![Add_New_Product](images/Add New Product.png)
 
 
 ## Deleting item
-![Deleting_item] (images/Deleting item.png)
+![Deleting_item](images/Deleting item.png)
 
 
 Thank you for using this project! 🚀
